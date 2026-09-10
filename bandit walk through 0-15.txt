@@ -1,0 +1,1624 @@
+Microsoft Windows [Version 10.0.26200.9278]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\Admin>ssh bandit10@bandit.labs.overthewire.org -p 2220
+                         _                     _ _ _
+                        | |__   __ _ _ __   __| (_) |_
+                        | '_ \ / _` | '_ \ / _` | | __|
+                        | |_) | (_| | | | | (_| | | |_
+                        |_.__/ \__,_|_| |_|\__,_|_|\__|
+
+
+                      This is an OverTheWire game server.
+            More information on http://www.overthewire.org/wargames
+
+backend: gibson-0
+bandit10@bandit.labs.overthewire.org's password:
+Connection closed by 51.20.162.29 port 2220
+
+C:\Users\Admin>B0s2khmbT9u0geKuOoVGW3JZKhndE3BG
+'B0s2khmbT9u0geKuOoVGW3JZKhndE3BG' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Admin>ssh bandit10@bandit.labs.overthewire.org -p 2220
+                         _                     _ _ _
+                        | |__   __ _ _ __   __| (_) |_
+                        | '_ \ / _` | '_ \ / _` | | __|
+                        | |_) | (_| | | | | (_| | | |_
+                        |_.__/ \__,_|_| |_|\__,_|_|\__|
+
+
+                      This is an OverTheWire game server.
+            More information on http://www.overthewire.org/wargames
+
+backend: gibson-0
+bandit10@bandit.labs.overthewire.org's password:
+
+      ,----..            ,----,          .---.
+     /   /   \         ,/   .`|         /. ./|
+    /   .     :      ,`   .'  :     .--'.  ' ;
+   .   /   ;.  \   ;    ;     /    /__./ \ : |
+  .   ;   /  ` ; .'___,/    ,' .--'.  '   \' .
+  ;   |  ; \ ; | |    :     | /___/ \ |    ' '
+  |   :  | ; | ' ;    |.';  ; ;   \  \;      :
+  .   |  ' ' ' : `----'  |  |  \   ;  `      |
+  '   ;  \; /  |     '   :  ;   .   \    .\  ;
+   \   \  ',  /      |   |  '    \   \   ' \ |
+    ;   :    /       '   :  |     :   '  |--"
+     \   \ .'        ;   |.'       \   \ ;
+  www. `---` ver     '---' he       '---" ire.org
+
+
+Welcome to OverTheWire!
+
+If you find any problems, please report them to the #wargames channel on
+discord or IRC.
+
+--[ Playing the games ]--
+
+  This machine might hold several wargames.
+  If you are playing "somegame", then:
+
+    * USERNAMES are somegame0, somegame1, ...
+    * Most LEVELS are stored in /somegame/.
+    * PASSWORDS for each level are stored in /etc/somegame_pass/.
+
+  Write-access to homedirectories is disabled. It is advised to create a
+  working directory with a hard-to-guess name in /tmp/.  You can use the
+  command "mktemp -d" in order to generate a random and hard to guess
+  directory in /tmp/.  Read-access to both /tmp/ is disabled and to /proc
+  restricted so that users cannot snoop on eachother. Files and directories
+  with easily guessable or short names will be periodically deleted! The /tmp
+  directory is regularly wiped.
+  Please play nice:
+
+    * don't leave orphan processes running
+    * don't leave exploit-files laying around
+    * don't annoy other players
+    * don't post passwords or spoilers
+    * again, DONT POST SPOILERS!
+      This includes writeups of your solution on your blog or website!
+
+--[ Tips ]--
+
+  This machine has a 64bit processor and many security-features enabled
+  by default, although ASLR has been switched off.  The following
+  compiler flags might be interesting:
+
+    -m32                    compile for 32bit
+    -fno-stack-protector    disable ProPolice
+    -Wl,-z,norelro          disable relro
+
+  In addition, the execstack tool can be used to flag the stack as
+  executable on ELF binaries.
+
+  Finally, network-access is limited for most levels by a local
+  firewall.
+
+--[ Tools ]--
+
+ For your convenience we have installed a few useful tools which you can find
+ in the following locations:
+
+    * gef (https://github.com/hugsy/gef) in /opt/gef/
+    * pwndbg (https://github.com/pwndbg/pwndbg) in /opt/pwndbg/
+    * gdbinit (https://github.com/gdbinit/Gdbinit) in /opt/gdbinit/
+    * pwntools (https://github.com/Gallopsled/pwntools)
+    * radare2 (http://www.radare.org/)
+
+--[ More information ]--
+
+  For more information regarding individual wargames, visit
+  http://www.overthewire.org/wargames/
+
+  For support, questions or comments, contact us on discord or IRC.
+
+  Enjoy your stay!
+
+bandit10@bandit:~$ ls
+data.txt
+bandit10@bandit:~$ cat data.txt
+VGhlIHBhc3N3b3JkIGlzIHBZZk9ZNkh3VXNEajVyTDlVdnloVTdNQ212OHZONVJvCg==
+bandit10@bandit:~$ base64 -d data.txt
+The password is pYfOY6HwUsDj5rL9UvyhU7MCmv8vN5Ro
+bandit10@bandit:~$ ssh bandit11@bandit.labs.overthewire.org -p 2220
+The authenticity of host '[bandit.labs.overthewire.org]:2220 ([127.0.0.1]:2220)' can't be established.
+ED25519 key fingerprint is: SHA256:C2ihUBV7ihnV1wUXRb4RrEcLfXC5CXlhmAAM/urerLY
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Could not create directory '/home/bandit10/.ssh' (Permission denied).
+Failed to add the host to the list of known hosts (/home/bandit10/.ssh/known_hosts).
+                         _                     _ _ _
+                        | |__   __ _ _ __   __| (_) |_
+                        | '_ \ / _` | '_ \ / _` | | __|
+                        | |_) | (_| | | | | (_| | | |_
+                        |_.__/ \__,_|_| |_|\__,_|_|\__|
+
+
+                      This is an OverTheWire game server.
+            More information on http://www.overthewire.org/wargames
+
+!!! You are trying to log into this SSH server with a password on port 2220 from localhost.
+!!! Connecting from localhost is blocked to conserve resources.
+!!! Please log out and log in again.
+
+backend: gibson-0
+Received disconnect from 127.0.0.1 port 2220:2: no authentication methods enabled
+Disconnected from 127.0.0.1 port 2220
+bandit10@bandit:~$ ssh bandit11@bandit.labs.overthewire.org -p 2220
+The authenticity of host '[bandit.labs.overthewire.org]:2220 ([127.0.0.1]:2220)' can't be established.
+ED25519 key fingerprint is: SHA256:C2ihUBV7ihnV1wUXRb4RrEcLfXC5CXlhmAAM/urerLY
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Could not create directory '/home/bandit10/.ssh' (Permission denied).
+Failed to add the host to the list of known hosts (/home/bandit10/.ssh/known_hosts).
+                         _                     _ _ _
+                        | |__   __ _ _ __   __| (_) |_
+                        | '_ \ / _` | '_ \ / _` | | __|
+                        | |_) | (_| | | | | (_| | | |_
+                        |_.__/ \__,_|_| |_|\__,_|_|\__|
+
+
+                      This is an OverTheWire game server.
+            More information on http://www.overthewire.org/wargames
+
+!!! You are trying to log into this SSH server with a password on port 2220 from localhost.
+!!! Connecting from localhost is blocked to conserve resources.
+!!! Please log out and log in again.
+
+backend: gibson-0
+Received disconnect from 127.0.0.1 port 2220:2: no authentication methods enabled
+Disconnected from 127.0.0.1 port 2220
+bandit10@bandit:~$ exit
+logout
+Connection to bandit.labs.overthewire.org closed.
+
+C:\Users\Admin>ssh bandit11@bandit.labs.overthewire.org -p 2220
+                         _                     _ _ _
+                        | |__   __ _ _ __   __| (_) |_
+                        | '_ \ / _` | '_ \ / _` | | __|
+                        | |_) | (_| | | | | (_| | | |_
+                        |_.__/ \__,_|_| |_|\__,_|_|\__|
+
+
+                      This is an OverTheWire game server.
+            More information on http://www.overthewire.org/wargames
+
+backend: gibson-0
+bandit11@bandit.labs.overthewire.org's password:
+Permission denied, please try again.
+bandit11@bandit.labs.overthewire.org's password:
+
+      ,----..            ,----,          .---.
+     /   /   \         ,/   .`|         /. ./|
+    /   .     :      ,`   .'  :     .--'.  ' ;
+   .   /   ;.  \   ;    ;     /    /__./ \ : |
+  .   ;   /  ` ; .'___,/    ,' .--'.  '   \' .
+  ;   |  ; \ ; | |    :     | /___/ \ |    ' '
+  |   :  | ; | ' ;    |.';  ; ;   \  \;      :
+  .   |  ' ' ' : `----'  |  |  \   ;  `      |
+  '   ;  \; /  |     '   :  ;   .   \    .\  ;
+   \   \  ',  /      |   |  '    \   \   ' \ |
+    ;   :    /       '   :  |     :   '  |--"
+     \   \ .'        ;   |.'       \   \ ;
+  www. `---` ver     '---' he       '---" ire.org
+
+
+Welcome to OverTheWire!
+
+If you find any problems, please report them to the #wargames channel on
+discord or IRC.
+
+--[ Playing the games ]--
+
+  This machine might hold several wargames.
+  If you are playing "somegame", then:
+
+    * USERNAMES are somegame0, somegame1, ...
+    * Most LEVELS are stored in /somegame/.
+    * PASSWORDS for each level are stored in /etc/somegame_pass/.
+
+  Write-access to homedirectories is disabled. It is advised to create a
+  working directory with a hard-to-guess name in /tmp/.  You can use the
+  command "mktemp -d" in order to generate a random and hard to guess
+  directory in /tmp/.  Read-access to both /tmp/ is disabled and to /proc
+  restricted so that users cannot snoop on eachother. Files and directories
+  with easily guessable or short names will be periodically deleted! The /tmp
+  directory is regularly wiped.
+  Please play nice:
+
+    * don't leave orphan processes running
+    * don't leave exploit-files laying around
+    * don't annoy other players
+    * don't post passwords or spoilers
+    * again, DONT POST SPOILERS!
+      This includes writeups of your solution on your blog or website!
+
+--[ Tips ]--
+
+  This machine has a 64bit processor and many security-features enabled
+  by default, although ASLR has been switched off.  The following
+  compiler flags might be interesting:
+
+    -m32                    compile for 32bit
+    -fno-stack-protector    disable ProPolice
+    -Wl,-z,norelro          disable relro
+
+  In addition, the execstack tool can be used to flag the stack as
+  executable on ELF binaries.
+
+  Finally, network-access is limited for most levels by a local
+  firewall.
+
+--[ Tools ]--
+
+ For your convenience we have installed a few useful tools which you can find
+ in the following locations:
+
+    * gef (https://github.com/hugsy/gef) in /opt/gef/
+    * pwndbg (https://github.com/pwndbg/pwndbg) in /opt/pwndbg/
+    * gdbinit (https://github.com/gdbinit/Gdbinit) in /opt/gdbinit/
+    * pwntools (https://github.com/Gallopsled/pwntools)
+    * radare2 (http://www.radare.org/)
+
+--[ More information ]--
+
+  For more information regarding individual wargames, visit
+  http://www.overthewire.org/wargames/
+
+  For support, questions or comments, contact us on discord or IRC.
+
+  Enjoy your stay!
+
+bandit11@bandit:~$ ^C
+bandit11@bandit:~$ ssh bandit11@bandit.labs.overthewire.org -p 2220
+The authenticity of host '[bandit.labs.overthewire.org]:2220 ([127.0.0.1]:2220)' can't be established.
+ED25519 key fingerprint is: SHA256:C2ihUBV7ihnV1wUXRb4RrEcLfXC5CXlhmAAM/urerLY
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? ^C
+bandit11@bandit:~$ ls
+data.txt
+bandit11@bandit:~$ mkdir /tmp/bandit12
+mkdir: /tmp/bandit12: File exists
+bandit11@bandit:~$ cp data.txt /tmp/bandit12/
+cp: cannot create regular file '/tmp/bandit12/data.txt': Permission denied
+bandit11@bandit:~$ cp data.txt /tmp/bandit12/
+cp: cannot create regular file '/tmp/bandit12/data.txt': Permission denied
+bandit11@bandit:~$ bandit11@bandit:~$ mkdir /tmp/bandit12
+mkdir: /tmp/bandit12: File exists
+bandit11@bandit:~$ cp data.txt /tmp/bandit12/
+cp: cannot create regular file '/tmp/bandit12/data.txt': Permission denied
+bandit11@bandit:~$ cp data.txt /tmp/bandit12/
+cp: cannot create regular file '/tmp/bandit12/data.txt': Permission denied
+bandit11@bandit:~$^C
+bandit11@bandit:~$ bandit11@bandit:~$ mkdir /tmp/bandit12
+mkdir: /tmp/bandit12: File exists
+bandit11@bandit:~$ cp data.txt /tmp/bandit12/
+cp: cannot create regular file '/tmp/bandit12/data.txt': Permission denied
+bandit11@bandit:~$ cp data.txt /tmp/bandit12/
+cp: cannot create regular file '/tmp/bandit12/data.txt': Permission denied
+bandit11@bandit:~$
+bandit11@bandit:~$: command not found
+Command 'mkdir:' not found, did you mean:
+  command 'mkdir' from deb coreutils-from-gnu (0.0.0~ubuntu25)
+  command 'mkdir' from deb coreutils-from-uutils (0.0.0~ubuntu25)
+  command 'mkdir' from deb coreutils-from-busybox (0.0.0~ubuntu25)
+  command 'mkdir' from deb coreutils-from-toybox (0.0.0~ubuntu25)
+Try: apt install <deb name>
+bandit11@bandit:~$: command not found
+Command 'cp:' not found, did you mean:
+  command 'cpu' from deb cpu (1.4.3-16build1)
+  command 'cp' from deb coreutils-from-gnu (0.0.0~ubuntu25)
+  command 'cp' from deb coreutils-from-uutils (0.0.0~ubuntu25)
+  command 'cp' from deb coreutils-from-busybox (0.0.0~ubuntu25)
+  command 'cp' from deb coreutils-from-toybox (0.0.0~ubuntu25)
+  command 'cph' from deb conda-package-handling (2.3.0-1)
+  command 'cpp' from deb cpp (4:15.2.0-5ubuntu1)
+  command 'cpr' from deb node-cpr (3.0.1-8)
+Try: apt install <deb name>
+bandit11@bandit:~$: command not found
+Command 'cp:' not found, did you mean:
+  command 'cph' from deb conda-package-handling (2.3.0-1)
+  command 'cpp' from deb cpp (4:15.2.0-5ubuntu1)
+  command 'cp' from deb coreutils-from-gnu (0.0.0~ubuntu25)
+  command 'cp' from deb coreutils-from-uutils (0.0.0~ubuntu25)
+  command 'cp' from deb coreutils-from-busybox (0.0.0~ubuntu25)
+  command 'cp' from deb coreutils-from-toybox (0.0.0~ubuntu25)
+  command 'cpu' from deb cpu (1.4.3-16build1)
+  command 'cpr' from deb node-cpr (3.0.1-8)
+Try: apt install <deb name>
+bandit11@bandit:~$: command not found
+bandit11@bandit:~$ bandit11@bandit:~$ mkdir /tmp/bandit12
+mkdir: /tmp/bandit12: File exists
+bandit11@bandit:~$ cp data.txt /tmp/bandit12/
+cp: cannot create regular file '/tmp/bandit12/data.txt': Permission denied
+bandit11@bandit:~$ cp data.txt /tmp/bandit12/
+cp: cannot create regular file '/tmp/bandit12/data.txt': Permission denied
+bandit11@bandit:~mkdir /tmp/bandit12_12345
+bandit11@bandit:~$: command not found
+Command 'mkdir:' not found, did you mean:
+  command 'mkdir' from deb coreutils-from-gnu (0.0.0~ubuntu25)
+  command 'mkdir' from deb coreutils-from-uutils (0.0.0~ubuntu25)
+  command 'mkdir' from deb coreutils-from-busybox (0.0.0~ubuntu25)
+  command 'mkdir' from deb coreutils-from-toybox (0.0.0~ubuntu25)
+Try: apt install <deb name>
+bandit11@bandit:~$: command not found
+Command 'cp:' not found, did you mean:
+  command 'cpr' from deb node-cpr (3.0.1-8)
+  command 'cp' from deb coreutils-from-gnu (0.0.0~ubuntu25)
+  command 'cp' from deb coreutils-from-uutils (0.0.0~ubuntu25)
+  command 'cp' from deb coreutils-from-busybox (0.0.0~ubuntu25)
+  command 'cp' from deb coreutils-from-toybox (0.0.0~ubuntu25)
+  command 'cpp' from deb cpp (4:15.2.0-5ubuntu1)
+  command 'cph' from deb conda-package-handling (2.3.0-1)
+  command 'cpu' from deb cpu (1.4.3-16build1)
+Try: apt install <deb name>
+bandit11@bandit:~$: command not found
+Command 'cp:' not found, did you mean:
+  command 'cpu' from deb cpu (1.4.3-16build1)
+  command 'cph' from deb conda-package-handling (2.3.0-1)
+  command 'cpr' from deb node-cpr (3.0.1-8)
+  command 'cpp' from deb cpp (4:15.2.0-5ubuntu1)
+  command 'cp' from deb coreutils-from-gnu (0.0.0~ubuntu25)
+  command 'cp' from deb coreutils-from-uutils (0.0.0~ubuntu25)
+  command 'cp' from deb coreutils-from-busybox (0.0.0~ubuntu25)
+  command 'cp' from deb coreutils-from-toybox (0.0.0~ubuntu25)
+Try: apt install <deb name>
+bandit11@bandit:~mkdir: command not found
+bandit11@bandit:~$ cp data.txt /tmp/bandit12_12345/
+cp: cannot create regular file '/tmp/bandit12_12345/': Not a directory
+bandit11@bandit:~$ cd /tmp/bandit12_12345
+-bash: cd: /tmp/bandit12_12345: No such file or directory
+bandit11@bandit:~$ whoami
+bandit11
+bandit11@bandit:~$ exit
+logout
+Connection to bandit.labs.overthewire.org closed.
+
+C:\Users\Admin>ssh bandit12@bandit.labs.overthewire.org -p 2220
+                         _                     _ _ _
+                        | |__   __ _ _ __   __| (_) |_
+                        | '_ \ / _` | '_ \ / _` | | __|
+                        | |_) | (_| | | | | (_| | | |_
+                        |_.__/ \__,_|_| |_|\__,_|_|\__|
+
+
+                      This is an OverTheWire game server.
+            More information on http://www.overthewire.org/wargames
+
+backend: gibson-0
+bandit12@bandit.labs.overthewire.org's password:
+Connection closed by 51.20.162.29 port 2220
+
+C:\Users\Admin>bandit12@bandit.labs.overthewire.org's password:
+'bandit12@bandit.labs.overthewire.org's' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Admin>ssh bandit11@bandit.labs.overthewire.org -p 2220
+                         _                     _ _ _
+                        | |__   __ _ _ __   __| (_) |_
+                        | '_ \ / _` | '_ \ / _` | | __|
+                        | |_) | (_| | | | | (_| | | |_
+                        |_.__/ \__,_|_| |_|\__,_|_|\__|
+
+
+                      This is an OverTheWire game server.
+            More information on http://www.overthewire.org/wargames
+
+backend: gibson-0
+bandit11@bandit.labs.overthewire.org's password:
+
+      ,----..            ,----,          .---.
+     /   /   \         ,/   .`|         /. ./|
+    /   .     :      ,`   .'  :     .--'.  ' ;
+   .   /   ;.  \   ;    ;     /    /__./ \ : |
+  .   ;   /  ` ; .'___,/    ,' .--'.  '   \' .
+  ;   |  ; \ ; | |    :     | /___/ \ |    ' '
+  |   :  | ; | ' ;    |.';  ; ;   \  \;      :
+  .   |  ' ' ' : `----'  |  |  \   ;  `      |
+  '   ;  \; /  |     '   :  ;   .   \    .\  ;
+   \   \  ',  /      |   |  '    \   \   ' \ |
+    ;   :    /       '   :  |     :   '  |--"
+     \   \ .'        ;   |.'       \   \ ;
+  www. `---` ver     '---' he       '---" ire.org
+
+
+Welcome to OverTheWire!
+
+If you find any problems, please report them to the #wargames channel on
+discord or IRC.
+
+--[ Playing the games ]--
+
+  This machine might hold several wargames.
+  If you are playing "somegame", then:
+
+    * USERNAMES are somegame0, somegame1, ...
+    * Most LEVELS are stored in /somegame/.
+    * PASSWORDS for each level are stored in /etc/somegame_pass/.
+
+  Write-access to homedirectories is disabled. It is advised to create a
+  working directory with a hard-to-guess name in /tmp/.  You can use the
+  command "mktemp -d" in order to generate a random and hard to guess
+  directory in /tmp/.  Read-access to both /tmp/ is disabled and to /proc
+  restricted so that users cannot snoop on eachother. Files and directories
+  with easily guessable or short names will be periodically deleted! The /tmp
+  directory is regularly wiped.
+  Please play nice:
+
+    * don't leave orphan processes running
+    * don't leave exploit-files laying around
+    * don't annoy other players
+    * don't post passwords or spoilers
+    * again, DONT POST SPOILERS!
+      This includes writeups of your solution on your blog or website!
+
+--[ Tips ]--
+
+  This machine has a 64bit processor and many security-features enabled
+  by default, although ASLR has been switched off.  The following
+  compiler flags might be interesting:
+
+    -m32                    compile for 32bit
+    -fno-stack-protector    disable ProPolice
+    -Wl,-z,norelro          disable relro
+
+  In addition, the execstack tool can be used to flag the stack as
+  executable on ELF binaries.
+
+  Finally, network-access is limited for most levels by a local
+  firewall.
+
+--[ Tools ]--
+
+ For your convenience we have installed a few useful tools which you can find
+ in the following locations:
+
+    * gef (https://github.com/hugsy/gef) in /opt/gef/
+    * pwndbg (https://github.com/pwndbg/pwndbg) in /opt/pwndbg/
+    * gdbinit (https://github.com/gdbinit/Gdbinit) in /opt/gdbinit/
+    * pwntools (https://github.com/Gallopsled/pwntools)
+    * radare2 (http://www.radare.org/)
+
+--[ More information ]--
+
+  For more information regarding individual wargames, visit
+  http://www.overthewire.org/wargames/
+
+  For support, questions or comments, contact us on discord or IRC.
+
+  Enjoy your stay!
+
+bandit11@bandit:~$ ls
+data.txt
+bandit11@bandit:~$ cat data.txt
+Gur cnffjbeq vf TEBbmJCB8DlA0zTewHxVQ0JPLxMvDkeA
+bandit11@bandit:~$ cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'
+The password is GROozWPO8QyN0mGrjUkID0WCYkZiQxrN
+bandit11@bandit:~$ exit
+logout
+Connection to bandit.labs.overthewire.org closed.
+
+C:\Users\Admin>ssh bandit12@bandit.labs.overthewire.org -p 2220
+                         _                     _ _ _
+                        | |__   __ _ _ __   __| (_) |_
+                        | '_ \ / _` | '_ \ / _` | | __|
+                        | |_) | (_| | | | | (_| | | |_
+                        |_.__/ \__,_|_| |_|\__,_|_|\__|
+
+
+                      This is an OverTheWire game server.
+            More information on http://www.overthewire.org/wargames
+
+backend: gibson-0
+bandit12@bandit.labs.overthewire.org's password:
+
+      ,----..            ,----,          .---.
+     /   /   \         ,/   .`|         /. ./|
+    /   .     :      ,`   .'  :     .--'.  ' ;
+   .   /   ;.  \   ;    ;     /    /__./ \ : |
+  .   ;   /  ` ; .'___,/    ,' .--'.  '   \' .
+  ;   |  ; \ ; | |    :     | /___/ \ |    ' '
+  |   :  | ; | ' ;    |.';  ; ;   \  \;      :
+  .   |  ' ' ' : `----'  |  |  \   ;  `      |
+  '   ;  \; /  |     '   :  ;   .   \    .\  ;
+   \   \  ',  /      |   |  '    \   \   ' \ |
+    ;   :    /       '   :  |     :   '  |--"
+     \   \ .'        ;   |.'       \   \ ;
+  www. `---` ver     '---' he       '---" ire.org
+
+
+Welcome to OverTheWire!
+
+If you find any problems, please report them to the #wargames channel on
+discord or IRC.
+
+--[ Playing the games ]--
+
+  This machine might hold several wargames.
+  If you are playing "somegame", then:
+
+    * USERNAMES are somegame0, somegame1, ...
+    * Most LEVELS are stored in /somegame/.
+    * PASSWORDS for each level are stored in /etc/somegame_pass/.
+
+  Write-access to homedirectories is disabled. It is advised to create a
+  working directory with a hard-to-guess name in /tmp/.  You can use the
+  command "mktemp -d" in order to generate a random and hard to guess
+  directory in /tmp/.  Read-access to both /tmp/ is disabled and to /proc
+  restricted so that users cannot snoop on eachother. Files and directories
+  with easily guessable or short names will be periodically deleted! The /tmp
+  directory is regularly wiped.
+  Please play nice:
+
+    * don't leave orphan processes running
+    * don't leave exploit-files laying around
+    * don't annoy other players
+    * don't post passwords or spoilers
+    * again, DONT POST SPOILERS!
+      This includes writeups of your solution on your blog or website!
+
+--[ Tips ]--
+
+  This machine has a 64bit processor and many security-features enabled
+  by default, although ASLR has been switched off.  The following
+  compiler flags might be interesting:
+
+    -m32                    compile for 32bit
+    -fno-stack-protector    disable ProPolice
+    -Wl,-z,norelro          disable relro
+
+  In addition, the execstack tool can be used to flag the stack as
+  executable on ELF binaries.
+
+  Finally, network-access is limited for most levels by a local
+  firewall.
+
+--[ Tools ]--
+
+ For your convenience we have installed a few useful tools which you can find
+ in the following locations:
+
+    * gef (https://github.com/hugsy/gef) in /opt/gef/
+    * pwndbg (https://github.com/pwndbg/pwndbg) in /opt/pwndbg/
+    * gdbinit (https://github.com/gdbinit/Gdbinit) in /opt/gdbinit/
+    * pwntools (https://github.com/Gallopsled/pwntools)
+    * radare2 (http://www.radare.org/)
+
+--[ More information ]--
+
+  For more information regarding individual wargames, visit
+  http://www.overthewire.org/wargames/
+
+  For support, questions or comments, contact us on discord or IRC.
+
+  Enjoy your stay!
+
+bandit12@bandit:~$ ls
+data.txt
+bandit12@bandit:~$ mkdir /tmp/mybandit12
+bandit12@bandit:~$ cp data.txt /tmp/mybandit12/
+bandit12@bandit:~$ cd /tmp/mybandit12
+bandit12@bandit:/tmp/mybandit12$ file data.txt
+data.txt: ASCII text
+bandit12@bandit:/tmp/mybandit12$ xxd -r data.txt data.bin
+bandit12@bandit:/tmp/mybandit12$ file data.bin
+data.bin: gzip compressed data, was "data2.bin", last modified: Wed Jun 24 14:58:58 2026, max compression, from Unix, original size modulo 2^32 578
+bandit12@bandit:/tmp/mybandit12$ gzip compressed data
+gzip: compressed: No such file or directory
+gzip: data: No such file or directory
+bandit12@bandit:/tmp/mybandit12$ mv data.bin data.gz
+bandit12@bandit:/tmp/mybandit12$ gunzip data.gz
+bandit12@bandit:/tmp/mybandit12$ ls
+data  data.txt
+bandit12@bandit:/tmp/mybandit12$ file data
+data: bzip2 compressed data, block size = 900k
+bandit12@bandit:/tmp/mybandit12$ mv data data.bz2
+bandit12@bandit:/tmp/mybandit12$ bunzip2 data.bz2
+bandit12@bandit:/tmp/mybandit12$ ls
+data  data.txt
+bandit12@bandit:/tmp/mybandit12$ file data
+data: gzip compressed data, was "data4.bin", last modified: Wed Jun 24 14:58:58 2026, max compression, from Unix, original size modulo 2^32 20480
+bandit12@bandit:/tmp/mybandit12$ mv data data.gz
+bandit12@bandit:/tmp/mybandit12$ gunzip data.gz
+bandit12@bandit:/tmp/mybandit12$ file data
+data: POSIX tar archive (GNU)
+bandit12@bandit:/tmp/mybandit12$ mv data data.tar
+bandit12@bandit:/tmp/mybandit12$ tar -xf data.tar
+bandit12@bandit:/tmp/mybandit12$ ls
+data.tar  data.txt  data5.bin
+bandit12@bandit:/tmp/mybandit12$ file data5.bin
+data5.bin: POSIX tar archive (GNU)
+bandit12@bandit:/tmp/mybandit12$ mv data5.bin data5.tar
+bandit12@bandit:/tmp/mybandit12$ tar -xf data5.tar
+bandit12@bandit:/tmp/mybandit12$ ls
+data.tar  data.txt  data5.tar  data6.bin
+bandit12@bandit:/tmp/mybandit12$ file data6.bin
+data6.bin: bzip2 compressed data, block size = 900k
+bandit12@bandit:/tmp/mybandit12$ mv data6.bin data6.bz2
+bandit12@bandit:/tmp/mybandit12$ bunzip2 data6.bz2
+bandit12@bandit:/tmp/mybandit12$
+bandit12@bandit:/tmp/mybandit12$ file data6
+data6: POSIX tar archive (GNU)
+bandit12@bandit:/tmp/mybandit12$ mv data6 data6.tar
+bandit12@bandit:/tmp/mybandit12$ tar -xf data6.tar
+bandit12@bandit:/tmp/mybandit12$ ls
+data.tar  data.txt  data5.tar  data6.tar  data8.bin
+bandit12@bandit:/tmp/mybandit12$ file data8.bin
+data8.bin: gzip compressed data, was "data9.bin", last modified: Wed Jun 24 14:58:58 2026, max compression, from Unix, original size modulo 2^32 49
+bandit12@bandit:/tmp/mybandit12$ mv data8.bin data8.gz
+bandit12@bandit:/tmp/mybandit12$ gunzip data8.gz
+bandit12@bandit:/tmp/mybandit12$ file data8
+data8: ASCII text
+bandit12@bandit:/tmp/mybandit12$ cat data8
+The password is qQYQiHOBPR8zR61qxYqX45quvihF2uzk
+bandit12@bandit:/tmp/mybandit12$ exit
+logout
+Connection to bandit.labs.overthewire.org closed.
+
+C:\Users\Admin>ssh bandit13@bandit.labs.overthewire.org -p 2220
+                         _                     _ _ _
+                        | |__   __ _ _ __   __| (_) |_
+                        | '_ \ / _` | '_ \ / _` | | __|
+                        | |_) | (_| | | | | (_| | | |_
+                        |_.__/ \__,_|_| |_|\__,_|_|\__|
+
+
+                      This is an OverTheWire game server.
+            More information on http://www.overthewire.org/wargames
+
+backend: gibson-0
+bandit13@bandit.labs.overthewire.org's password:
+
+      ,----..            ,----,          .---.
+     /   /   \         ,/   .`|         /. ./|
+    /   .     :      ,`   .'  :     .--'.  ' ;
+   .   /   ;.  \   ;    ;     /    /__./ \ : |
+  .   ;   /  ` ; .'___,/    ,' .--'.  '   \' .
+  ;   |  ; \ ; | |    :     | /___/ \ |    ' '
+  |   :  | ; | ' ;    |.';  ; ;   \  \;      :
+  .   |  ' ' ' : `----'  |  |  \   ;  `      |
+  '   ;  \; /  |     '   :  ;   .   \    .\  ;
+   \   \  ',  /      |   |  '    \   \   ' \ |
+    ;   :    /       '   :  |     :   '  |--"
+     \   \ .'        ;   |.'       \   \ ;
+  www. `---` ver     '---' he       '---" ire.org
+
+
+Welcome to OverTheWire!
+
+If you find any problems, please report them to the #wargames channel on
+discord or IRC.
+
+--[ Playing the games ]--
+
+  This machine might hold several wargames.
+  If you are playing "somegame", then:
+
+    * USERNAMES are somegame0, somegame1, ...
+    * Most LEVELS are stored in /somegame/.
+    * PASSWORDS for each level are stored in /etc/somegame_pass/.
+
+  Write-access to homedirectories is disabled. It is advised to create a
+  working directory with a hard-to-guess name in /tmp/.  You can use the
+  command "mktemp -d" in order to generate a random and hard to guess
+  directory in /tmp/.  Read-access to both /tmp/ is disabled and to /proc
+  restricted so that users cannot snoop on eachother. Files and directories
+  with easily guessable or short names will be periodically deleted! The /tmp
+  directory is regularly wiped.
+  Please play nice:
+
+    * don't leave orphan processes running
+    * don't leave exploit-files laying around
+    * don't annoy other players
+    * don't post passwords or spoilers
+    * again, DONT POST SPOILERS!
+      This includes writeups of your solution on your blog or website!
+
+--[ Tips ]--
+
+  This machine has a 64bit processor and many security-features enabled
+  by default, although ASLR has been switched off.  The following
+  compiler flags might be interesting:
+
+    -m32                    compile for 32bit
+    -fno-stack-protector    disable ProPolice
+    -Wl,-z,norelro          disable relro
+
+  In addition, the execstack tool can be used to flag the stack as
+  executable on ELF binaries.
+
+  Finally, network-access is limited for most levels by a local
+  firewall.
+
+--[ Tools ]--
+
+ For your convenience we have installed a few useful tools which you can find
+ in the following locations:
+
+    * gef (https://github.com/hugsy/gef) in /opt/gef/
+    * pwndbg (https://github.com/pwndbg/pwndbg) in /opt/pwndbg/
+    * gdbinit (https://github.com/gdbinit/Gdbinit) in /opt/gdbinit/
+    * pwntools (https://github.com/Gallopsled/pwntools)
+    * radare2 (http://www.radare.org/)
+
+--[ More information ]--
+
+  For more information regarding individual wargames, visit
+  http://www.overthewire.org/wargames/
+
+  For support, questions or comments, contact us on discord or IRC.
+
+  Enjoy your stay!
+
+bandit13@bandit:~$ ls
+HINT  sshkey.private
+bandit13@bandit:~$ ls -l sshkey.private
+-rw-r----- 1 bandit14 bandit13 2602 Jun 24 14:59 sshkey.private
+bandit13@bandit:~$ ssh -i sshkey.private bandit14@localhost -p 2220
+The authenticity of host '[localhost]:2220 ([127.0.0.1]:2220)' can't be established.
+ED25519 key fingerprint is: SHA256:C2ihUBV7ihnV1wUXRb4RrEcLfXC5CXlhmAAM/urerLY
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Could not create directory '/home/bandit13/.ssh' (Permission denied).
+Failed to add the host to the list of known hosts (/home/bandit13/.ssh/known_hosts).
+                         _                     _ _ _
+                        | |__   __ _ _ __   __| (_) |_
+                        | '_ \ / _` | '_ \ / _` | | __|
+                        | |_) | (_| | | | | (_| | | |_
+                        |_.__/ \__,_|_| |_|\__,_|_|\__|
+
+
+                      This is an OverTheWire game server.
+            More information on http://www.overthewire.org/wargames
+
+!!! You are trying to log into this SSH server with a password on port 2220 from localhost.
+!!! Connecting from localhost is blocked to conserve resources.
+!!! Please log out and log in again.
+
+backend: gibson-0
+Received disconnect from 127.0.0.1 port 2220:2: no authentication methods enabled
+Disconnected from 127.0.0.1 port 2220
+bandit13@bandit:~$ ssh -i sshkey.private bandit14@localhost -p 2220
+The authenticity of host '[localhost]:2220 ([127.0.0.1]:2220)' can't be established.
+ED25519 key fingerprint is: SHA256:C2ihUBV7ihnV1wUXRb4RrEcLfXC5CXlhmAAM/urerLY
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Could not create directory '/home/bandit13/.ssh' (Permission denied).
+Failed to add the host to the list of known hosts (/home/bandit13/.ssh/known_hosts).
+                         _                     _ _ _
+                        | |__   __ _ _ __   __| (_) |_
+                        | '_ \ / _` | '_ \ / _` | | __|
+                        | |_) | (_| | | | | (_| | | |_
+                        |_.__/ \__,_|_| |_|\__,_|_|\__|
+
+
+                      This is an OverTheWire game server.
+            More information on http://www.overthewire.org/wargames
+
+!!! You are trying to log into this SSH server with a password on port 2220 from localhost.
+!!! Connecting from localhost is blocked to conserve resources.
+!!! Please log out and log in again.
+
+backend: gibson-0
+Received disconnect from 127.0.0.1 port 2220:2: no authentication methods enabled
+Disconnected from 127.0.0.1 port 2220
+bandit13@bandit:~$ exit
+logout
+Connection to bandit.labs.overthewire.org closed.
+
+C:\Users\Admin>cat sshkey.private
+'cat' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Admin>ssh bandit13@bandit.labs.overthewire.org -p 2220
+                         _                     _ _ _
+                        | |__   __ _ _ __   __| (_) |_
+                        | '_ \ / _` | '_ \ / _` | | __|
+                        | |_) | (_| | | | | (_| | | |_
+                        |_.__/ \__,_|_| |_|\__,_|_|\__|
+
+
+                      This is an OverTheWire game server.
+            More information on http://www.overthewire.org/wargames
+
+backend: gibson-0
+bandit13@bandit.labs.overthewire.org's password:
+
+      ,----..            ,----,          .---.
+     /   /   \         ,/   .`|         /. ./|
+    /   .     :      ,`   .'  :     .--'.  ' ;
+   .   /   ;.  \   ;    ;     /    /__./ \ : |
+  .   ;   /  ` ; .'___,/    ,' .--'.  '   \' .
+  ;   |  ; \ ; | |    :     | /___/ \ |    ' '
+  |   :  | ; | ' ;    |.';  ; ;   \  \;      :
+  .   |  ' ' ' : `----'  |  |  \   ;  `      |
+  '   ;  \; /  |     '   :  ;   .   \    .\  ;
+   \   \  ',  /      |   |  '    \   \   ' \ |
+    ;   :    /       '   :  |     :   '  |--"
+     \   \ .'        ;   |.'       \   \ ;
+  www. `---` ver     '---' he       '---" ire.org
+
+
+Welcome to OverTheWire!
+
+If you find any problems, please report them to the #wargames channel on
+discord or IRC.
+
+--[ Playing the games ]--
+
+  This machine might hold several wargames.
+  If you are playing "somegame", then:
+
+    * USERNAMES are somegame0, somegame1, ...
+    * Most LEVELS are stored in /somegame/.
+    * PASSWORDS for each level are stored in /etc/somegame_pass/.
+
+  Write-access to homedirectories is disabled. It is advised to create a
+  working directory with a hard-to-guess name in /tmp/.  You can use the
+  command "mktemp -d" in order to generate a random and hard to guess
+  directory in /tmp/.  Read-access to both /tmp/ is disabled and to /proc
+  restricted so that users cannot snoop on eachother. Files and directories
+  with easily guessable or short names will be periodically deleted! The /tmp
+  directory is regularly wiped.
+  Please play nice:
+
+    * don't leave orphan processes running
+    * don't leave exploit-files laying around
+    * don't annoy other players
+    * don't post passwords or spoilers
+    * again, DONT POST SPOILERS!
+      This includes writeups of your solution on your blog or website!
+
+--[ Tips ]--
+
+  This machine has a 64bit processor and many security-features enabled
+  by default, although ASLR has been switched off.  The following
+  compiler flags might be interesting:
+
+    -m32                    compile for 32bit
+    -fno-stack-protector    disable ProPolice
+    -Wl,-z,norelro          disable relro
+
+  In addition, the execstack tool can be used to flag the stack as
+  executable on ELF binaries.
+
+  Finally, network-access is limited for most levels by a local
+  firewall.
+
+--[ Tools ]--
+
+ For your convenience we have installed a few useful tools which you can find
+ in the following locations:
+
+    * gef (https://github.com/hugsy/gef) in /opt/gef/
+    * pwndbg (https://github.com/pwndbg/pwndbg) in /opt/pwndbg/
+    * gdbinit (https://github.com/gdbinit/Gdbinit) in /opt/gdbinit/
+    * pwntools (https://github.com/Gallopsled/pwntools)
+    * radare2 (http://www.radare.org/)
+
+--[ More information ]--
+
+  For more information regarding individual wargames, visit
+  http://www.overthewire.org/wargames/
+
+  For support, questions or comments, contact us on discord or IRC.
+
+  Enjoy your stay!
+
+bandit13@bandit:~$ ls -l sshkey.private
+-rw-r----- 1 bandit14 bandit13 2602 Jun 24 14:59 sshkey.private
+bandit13@bandit:~$ ssh -i sshkey.private bandit14@bandit.labs.overthewire.org -p 2220
+The authenticity of host '[bandit.labs.overthewire.org]:2220 ([127.0.0.1]:2220)' can't be established.
+ED25519 key fingerprint is: SHA256:C2ihUBV7ihnV1wUXRb4RrEcLfXC5CXlhmAAM/urerLY
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Could not create directory '/home/bandit13/.ssh' (Permission denied).
+Failed to add the host to the list of known hosts (/home/bandit13/.ssh/known_hosts).
+                         _                     _ _ _
+                        | |__   __ _ _ __   __| (_) |_
+                        | '_ \ / _` | '_ \ / _` | | __|
+                        | |_) | (_| | | | | (_| | | |_
+                        |_.__/ \__,_|_| |_|\__,_|_|\__|
+
+
+                      This is an OverTheWire game server.
+            More information on http://www.overthewire.org/wargames
+
+!!! You are trying to log into this SSH server with a password on port 2220 from localhost.
+!!! Connecting from localhost is blocked to conserve resources.
+!!! Please log out and log in again.
+
+backend: gibson-0
+Received disconnect from 127.0.0.1 port 2220:2: no authentication methods enabled
+Disconnected from 127.0.0.1 port 2220
+bandit13@bandit:~$ cat sshkey.private
+-----BEGIN OPENSSH PRIVATE KEY-----
+b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAABlwAAAAdzc2gtcn
+NhAAAAAwEAAQAAAYEAuCCoxSR6xDCnsm98kqan1x1JF3mfZ6kZa+BoAHetQ/91F4EKTfmE
+E+Xs8yVgLhn1YL0TvyVswMzy33OeFJV/KEzef54V8yZo7jFcx+pQlOF6+BFRy+wsyLASV5
+XxD/AtafdbVfLZFGTLC53kOFfT0VxokFmnTlIwRyxRJuNAWP9+fkAtbnfqkkixWqg0ZaLr
+1fICYam6vb6ilmNfuiGHZyQNHeTkOKZgAaMnQW6bYlRjnkxsNNxk1pj0sT3MUQdLrPCdyh
+l8rXUqZ60NZPA6X82/hJNQJR+zVghXrGmTTlU7MAHN7rTdoq4bIQtDShuZZmd5igp5OvVg
+tCn4bRM2CFXl8m0P6gNDpR+VYH5f99MwdXyrDUAzuusH7H6CyawRZZF8rFoqONc6HwTJ2h
+YJw2uf85ltD3wR8XWzvnBlf2+U9OEmhs01uEYNtNvhq7Gvz/TGI0wR0hEBmsznSns0jShT
+cqVsnTMhHaXse3u2D+tbGoC3wOcOyjeX7Skhq63bAAAFiMnVC+zJ1QvsAAAAB3NzaC1yc2
+EAAAGBALggqMUkesQwp7JvfJKmp9cdSRd5n2epGWvgaAB3rUP/dReBCk35hBPl7PMlYC4Z
+9WC9E78lbMDM8t9znhSVfyhM3n+eFfMmaO4xXMfqUJThevgRUcvsLMiwEleV8Q/wLWn3W1
+Xy2RRkywud5DhX09FcaJBZp05SMEcsUSbjQFj/fn5ALW536pJIsVqoNGWi69XyAmGpur2+
+opZjX7ohh2ckDR3k5DimYAGjJ0Fum2JUY55MbDTcZNaY9LE9zFEHS6zwncoZfK11KmetDW
+TwOl/Nv4STUCUfs1YIV6xpk05VOzABze603aKuGyELQ0obmWZneYoKeTr1YLQp+G0TNghV
+5fJtD+oDQ6UflWB+X/fTMHV8qw1AM7rrB+x+gsmsEWWRfKxaKjjXOh8EydoWCcNrn/OZbQ
+98EfF1s75wZX9vlPThJobNNbhGDbTb4auxr8/0xiNMEdIRAZrM50p7NI0oU3KlbJ0zIR2l
+7Ht7tg/rWxqAt8DnDso3l+0pIaut2wAAAAMBAAEAAAGAEgTUL1LGFtwCFUK2yK05gKIzjH
+IRCPZx7+4qj10m3iAqR84PgZj49W+LVDIkqu5MZpaqT4rsjSOhYv+wCSimJH39SjTgxgZM
+v36iK0hBcYhtXchoHlIzAcLFUL/yMtKYxyV3UT5uQwIoIq9lbaQerP7jlrjHWDFP2y85k9
+oqams6aEWEjKp8kKs/e/U5B3c9qBbCZ+dRyI7W32vDKvZsB0puZC4JrYeOnqpmRY968lD6
+3Lty3WtyDNQ0IgI/s/BIK4wmzFM/drZHOLJYjzJssyvjaSf5XydPq0sK+z/0wRUt1ev4+j
+2hBuFqunZN0uq2nIz4LSSoclPtTZqu2PhbQgGJj8OaXSH+TkKoLv+sG8dO+rrWtllkDJPX
+YsWBmcWfd/Rj0LnkOBSGu+O0ne4IpK+7wAWNoJwpw8MQkLRJkATay0rsGw3Bt7Bf7oqnDA
+gPFNfgckMfhWiORhwezgm5zEK50g4cCgwdCH2YQwQluRQHWKKPat9XjXCxSj3N9D1BAAAA
+wF2LTVT5VAvkqhJRe4KeT8RhydARmWdt/6YUY+liDnK/Bm4lhpeUrXJ2frX1sGeAty60ZL
+lA31Y+kV9xgS4HNOT2aRTCXdfVJ4XmMCsiTxcRejTo92c3EIfD/ttbxkoLTsR/2tjkYje3
+GbMOZpg3n0RgtpH0sjYFy5XyBByNEg7GEJ6jSNBr9nA+wZILqVbuaDdn+FeVcgWSxFUyIC
+kGZ0HketuIdv7EkperlJCcklOLl6Z3i0jwlFcMuZj98b1u/QAAAMEA5JNGvpj8WT4aQuM7
+XME/N/m//8/sAb2DMHUWMY0ySSSNRDbM3pJKkja7nUp0CybwTYTrf/agLxIgdQAo71GpK7
+ePRmsGu5+mrreNJKicGyER0IqCBhbWyljGDKFMJNGb2gk0Mu9XNZk9y3lRDmPRcfBMekmV
+fAjvy5rgAqyf/PsKznyZE12eGosH+CkfvWXdVRXd/hoOdWIZqaC+w8nLso6WLKhptWz8ke
+SghZBBAsJW42cyenvyIdIzpVIcJpubAAAAwQDOOCoj/QwJLwXOd75KuUsfgI0Esq9vLSWl
+Ds3fQGhnNMEJZfD9B/W8Xa7VClfPHDItcDoXiSgj4dQnS1JeeVBBUHXLULmKLmNLRNQjLD
+0HSgyFYTpxl8tO5ZAlFRnGEwe7y9RvNeXp9zPQC2v1FTVQ2RdALiWvR4fGyDu0ER4hYiA/
+WfqaBSBABkdhyWLiTBja/VncIHBZ04Bk1S9nwc0z6USyTXpTwpZIJw1O74Tjk+8X3or8WC
+KN158egNsB+sEAAAAOcnVkeUBsb2NhbGhvc3QBAgMEBQ==
+-----END OPENSSH PRIVATE KEY-----
+bandit13@bandit:~$ notepad sshkey.private
+notepad: command not found
+bandit13@bandit:~$ notepad sshkey.private
+notepad: command not found
+bandit13@bandit:~$ exit
+logout
+Connection to bandit.labs.overthewire.org closed.
+
+C:\Users\Admin>-----BEGIN OPENSSH PRIVATE KEY-----
+'-----BEGIN' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Admin>b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAABlwAAAAdzc2gtcn
+'b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAABlwAAAAdzc2gtcn' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Admin>NhAAAAAwEAAQAAAYEAuCCoxSR6xDCnsm98kqan1x1JF3mfZ6kZa+BoAHetQ/91F4EKTfmE
+'NhAAAAAwEAAQAAAYEAuCCoxSR6xDCnsm98kqan1x1JF3mfZ6kZa+BoAHetQ' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Admin>E+Xs8yVgLhn1YL0TvyVswMzy33OeFJV/KEzef54V8yZo7jFcx+pQlOF6+BFRy+wsyLASV5
+'E+Xs8yVgLhn1YL0TvyVswMzy33OeFJV' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Admin>XxD/AtafdbVfLZFGTLC53kOFfT0VxokFmnTlIwRyxRJuNAWP9+fkAtbnfqkkixWqg0ZaLr
+'XxD' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Admin>1fICYam6vb6ilmNfuiGHZyQNHeTkOKZgAaMnQW6bYlRjnkxsNNxk1pj0sT3MUQdLrPCdyh
+'1fICYam6vb6ilmNfuiGHZyQNHeTkOKZgAaMnQW6bYlRjnkxsNNxk1pj0sT3MUQdLrPCdyh' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Admin>l8rXUqZ60NZPA6X82/hJNQJR+zVghXrGmTTlU7MAHN7rTdoq4bIQtDShuZZmd5igp5OvVg
+'l8rXUqZ60NZPA6X82' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Admin>tCn4bRM2CFXl8m0P6gNDpR+VYH5f99MwdXyrDUAzuusH7H6CyawRZZF8rFoqONc6HwTJ2h
+'tCn4bRM2CFXl8m0P6gNDpR+VYH5f99MwdXyrDUAzuusH7H6CyawRZZF8rFoqONc6HwTJ2h' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Admin>YJw2uf85ltD3wR8XWzvnBlf2+U9OEmhs01uEYNtNvhq7Gvz/TGI0wR0hEBmsznSns0jShT
+'YJw2uf85ltD3wR8XWzvnBlf2+U9OEmhs01uEYNtNvhq7Gvz' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Admin>cqVsnTMhHaXse3u2D+tbGoC3wOcOyjeX7Skhq63bAAAFiMnVC+zJ1QvsAAAAB3NzaC1yc2
+'cqVsnTMhHaXse3u2D+tbGoC3wOcOyjeX7Skhq63bAAAFiMnVC+zJ1QvsAAAAB3NzaC1yc2' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Admin>EAAAGBALggqMUkesQwp7JvfJKmp9cdSRd5n2epGWvgaAB3rUP/dReBCk35hBPl7PMlYC4Z
+'EAAAGBALggqMUkesQwp7JvfJKmp9cdSRd5n2epGWvgaAB3rUP' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Admin>9WC9E78lbMDM8t9znhSVfyhM3n+eFfMmaO4xXMfqUJThevgRUcvsLMiwEleV8Q/wLWn3W1
+'9WC9E78lbMDM8t9znhSVfyhM3n+eFfMmaO4xXMfqUJThevgRUcvsLMiwEleV8Q' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Admin>Xy2RRkywud5DhX09FcaJBZp05SMEcsUSbjQFj/fn5ALW536pJIsVqoNGWi69XyAmGpur2+
+'Xy2RRkywud5DhX09FcaJBZp05SMEcsUSbjQFj' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Admin>opZjX7ohh2ckDR3k5DimYAGjJ0Fum2JUY55MbDTcZNaY9LE9zFEHS6zwncoZfK11KmetDW
+'opZjX7ohh2ckDR3k5DimYAGjJ0Fum2JUY55MbDTcZNaY9LE9zFEHS6zwncoZfK11KmetDW' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Admin>TwOl/Nv4STUCUfs1YIV6xpk05VOzABze603aKuGyELQ0obmWZneYoKeTr1YLQp+G0TNghV
+'TwOl' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Admin>5fJtD+oDQ6UflWB+X/fTMHV8qw1AM7rrB+x+gsmsEWWRfKxaKjjXOh8EydoWCcNrn/OZbQ
+'5fJtD+oDQ6UflWB+X' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Admin>98EfF1s75wZX9vlPThJobNNbhGDbTb4auxr8/0xiNMEdIRAZrM50p7NI0oU3KlbJ0zIR2l
+'98EfF1s75wZX9vlPThJobNNbhGDbTb4auxr8' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Admin>7Ht7tg/rWxqAt8DnDso3l+0pIaut2wAAAAMBAAEAAAGAEgTUL1LGFtwCFUK2yK05gKIzjH
+'7Ht7tg' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Admin>IRCPZx7+4qj10m3iAqR84PgZj49W+LVDIkqu5MZpaqT4rsjSOhYv+wCSimJH39SjTgxgZM
+'IRCPZx7+4qj10m3iAqR84PgZj49W+LVDIkqu5MZpaqT4rsjSOhYv+wCSimJH39SjTgxgZM' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Admin>v36iK0hBcYhtXchoHlIzAcLFUL/yMtKYxyV3UT5uQwIoIq9lbaQerP7jlrjHWDFP2y85k9
+'v36iK0hBcYhtXchoHlIzAcLFUL' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Admin>oqams6aEWEjKp8kKs/e/U5B3c9qBbCZ+dRyI7W32vDKvZsB0puZC4JrYeOnqpmRY968lD6
+'oqams6aEWEjKp8kKs' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Admin>3Lty3WtyDNQ0IgI/s/BIK4wmzFM/drZHOLJYjzJssyvjaSf5XydPq0sK+z/0wRUt1ev4+j
+'3Lty3WtyDNQ0IgI' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Admin>2hBuFqunZN0uq2nIz4LSSoclPtTZqu2PhbQgGJj8OaXSH+TkKoLv+sG8dO+rrWtllkDJPX
+'2hBuFqunZN0uq2nIz4LSSoclPtTZqu2PhbQgGJj8OaXSH+TkKoLv+sG8dO+rrWtllkDJPX' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Admin>YsWBmcWfd/Rj0LnkOBSGu+O0ne4IpK+7wAWNoJwpw8MQkLRJkATay0rsGw3Bt7Bf7oqnDA
+'YsWBmcWfd' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Admin>gPFNfgckMfhWiORhwezgm5zEK50g4cCgwdCH2YQwQluRQHWKKPat9XjXCxSj3N9D1BAAAA
+'gPFNfgckMfhWiORhwezgm5zEK50g4cCgwdCH2YQwQluRQHWKKPat9XjXCxSj3N9D1BAAAA' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Admin>wF2LTVT5VAvkqhJRe4KeT8RhydARmWdt/6YUY+liDnK/Bm4lhpeUrXJ2frX1sGeAty60ZL
+'wF2LTVT5VAvkqhJRe4KeT8RhydARmWdt' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Admin>lA31Y+kV9xgS4HNOT2aRTCXdfVJ4XmMCsiTxcRejTo92c3EIfD/ttbxkoLTsR/2tjkYje3
+'lA31Y+kV9xgS4HNOT2aRTCXdfVJ4XmMCsiTxcRejTo92c3EIfD' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Admin>GbMOZpg3n0RgtpH0sjYFy5XyBByNEg7GEJ6jSNBr9nA+wZILqVbuaDdn+FeVcgWSxFUyIC
+'GbMOZpg3n0RgtpH0sjYFy5XyBByNEg7GEJ6jSNBr9nA+wZILqVbuaDdn+FeVcgWSxFUyIC' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Admin>kGZ0HketuIdv7EkperlJCcklOLl6Z3i0jwlFcMuZj98b1u/QAAAMEA5JNGvpj8WT4aQuM7
+'kGZ0HketuIdv7EkperlJCcklOLl6Z3i0jwlFcMuZj98b1u' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Admin>XME/N/m//8/sAb2DMHUWMY0ySSSNRDbM3pJKkja7nUp0CybwTYTrf/agLxIgdQAo71GpK7
+'XME' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Admin>ePRmsGu5+mrreNJKicGyER0IqCBhbWyljGDKFMJNGb2gk0Mu9XNZk9y3lRDmPRcfBMekmV
+'ePRmsGu5+mrreNJKicGyER0IqCBhbWyljGDKFMJNGb2gk0Mu9XNZk9y3lRDmPRcfBMekmV' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Admin>fAjvy5rgAqyf/PsKznyZE12eGosH+CkfvWXdVRXd/hoOdWIZqaC+w8nLso6WLKhptWz8ke
+'fAjvy5rgAqyf' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Admin>SghZBBAsJW42cyenvyIdIzpVIcJpubAAAAwQDOOCoj/QwJLwXOd75KuUsfgI0Esq9vLSWl
+'SghZBBAsJW42cyenvyIdIzpVIcJpubAAAAwQDOOCoj' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Admin>Ds3fQGhnNMEJZfD9B/W8Xa7VClfPHDItcDoXiSgj4dQnS1JeeVBBUHXLULmKLmNLRNQjLD
+'Ds3fQGhnNMEJZfD9B' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Admin>0HSgyFYTpxl8tO5ZAlFRnGEwe7y9RvNeXp9zPQC2v1FTVQ2RdALiWvR4fGyDu0ER4hYiA/
+'0HSgyFYTpxl8tO5ZAlFRnGEwe7y9RvNeXp9zPQC2v1FTVQ2RdALiWvR4fGyDu0ER4hYiA' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Admin>WfqaBSBABkdhyWLiTBja/VncIHBZ04Bk1S9nwc0z6USyTXpTwpZIJw1O74Tjk+8X3or8WC
+'WfqaBSBABkdhyWLiTBja' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Admin>KN158egNsB+sEAAAAOcnVkeUBsb2NhbGhvc3QBAgMEBQ==
+'KN158egNsB+sEAAAAOcnVkeUBsb2NhbGhvc3QBAgMEBQ' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Admin>-----END OPENSSH PRIVATE KEY-----
+
+C:\Users\Admin>ssh bandit13@bandit.labs.overthewire.org -p 2220
+                         _                     _ _ _
+                        | |__   __ _ _ __   __| (_) |_
+                        | '_ \ / _` | '_ \ / _` | | __|
+                        | |_) | (_| | | | | (_| | | |_
+                        |_.__/ \__,_|_| |_|\__,_|_|\__|
+
+
+                      This is an OverTheWire game server.
+            More information on http://www.overthewire.org/wargames
+
+backend: gibson-0
+bandit13@bandit.labs.overthewire.org's password:
+
+      ,----..            ,----,          .---.
+     /   /   \         ,/   .`|         /. ./|
+    /   .     :      ,`   .'  :     .--'.  ' ;
+   .   /   ;.  \   ;    ;     /    /__./ \ : |
+  .   ;   /  ` ; .'___,/    ,' .--'.  '   \' .
+  ;   |  ; \ ; | |    :     | /___/ \ |    ' '
+  |   :  | ; | ' ;    |.';  ; ;   \  \;      :
+  .   |  ' ' ' : `----'  |  |  \   ;  `      |
+  '   ;  \; /  |     '   :  ;   .   \    .\  ;
+   \   \  ',  /      |   |  '    \   \   ' \ |
+    ;   :    /       '   :  |     :   '  |--"
+     \   \ .'        ;   |.'       \   \ ;
+  www. `---` ver     '---' he       '---" ire.org
+
+
+Welcome to OverTheWire!
+
+If you find any problems, please report them to the #wargames channel on
+discord or IRC.
+
+--[ Playing the games ]--
+
+  This machine might hold several wargames.
+  If you are playing "somegame", then:
+
+    * USERNAMES are somegame0, somegame1, ...
+    * Most LEVELS are stored in /somegame/.
+    * PASSWORDS for each level are stored in /etc/somegame_pass/.
+
+  Write-access to homedirectories is disabled. It is advised to create a
+  working directory with a hard-to-guess name in /tmp/.  You can use the
+  command "mktemp -d" in order to generate a random and hard to guess
+  directory in /tmp/.  Read-access to both /tmp/ is disabled and to /proc
+  restricted so that users cannot snoop on eachother. Files and directories
+  with easily guessable or short names will be periodically deleted! The /tmp
+  directory is regularly wiped.
+  Please play nice:
+
+    * don't leave orphan processes running
+    * don't leave exploit-files laying around
+    * don't annoy other players
+    * don't post passwords or spoilers
+    * again, DONT POST SPOILERS!
+      This includes writeups of your solution on your blog or website!
+
+--[ Tips ]--
+
+  This machine has a 64bit processor and many security-features enabled
+  by default, although ASLR has been switched off.  The following
+  compiler flags might be interesting:
+
+    -m32                    compile for 32bit
+    -fno-stack-protector    disable ProPolice
+    -Wl,-z,norelro          disable relro
+
+  In addition, the execstack tool can be used to flag the stack as
+  executable on ELF binaries.
+
+  Finally, network-access is limited for most levels by a local
+  firewall.
+
+--[ Tools ]--
+
+ For your convenience we have installed a few useful tools which you can find
+ in the following locations:
+
+    * gef (https://github.com/hugsy/gef) in /opt/gef/
+    * pwndbg (https://github.com/pwndbg/pwndbg) in /opt/pwndbg/
+    * gdbinit (https://github.com/gdbinit/Gdbinit) in /opt/gdbinit/
+    * pwntools (https://github.com/Gallopsled/pwntools)
+    * radare2 (http://www.radare.org/)
+
+--[ More information ]--
+
+  For more information regarding individual wargames, visit
+  http://www.overthewire.org/wargames/
+
+  For support, questions or comments, contact us on discord or IRC.
+
+  Enjoy your stay!
+
+bandit13@bandit:~$ exit
+logout
+Connection to bandit.labs.overthewire.org closed.
+
+C:\Users\Admin>scp -P 2220 bandit13@bandit.labs.overthewire.org:sshkey.private sshkey.private
+                         _                     _ _ _
+                        | |__   __ _ _ __   __| (_) |_
+                        | '_ \ / _` | '_ \ / _` | | __|
+                        | |_) | (_| | | | | (_| | | |_
+                        |_.__/ \__,_|_| |_|\__,_|_|\__|
+
+
+                      This is an OverTheWire game server.
+            More information on http://www.overthewire.org/wargames
+
+backend: gibson-0
+bandit13@bandit.labs.overthewire.org's password:
+sshkey.private               100% 2602     6.3KB/s   00:00
+
+C:\Users\Admin>ssh -i sshkey.private bandit14@bandit.labs.overthewire.org -p 2220
+                         _                     _ _ _
+                        | |__   __ _ _ __   __| (_) |_
+                        | '_ \ / _` | '_ \ / _` | | __|
+                        | |_) | (_| | | | | (_| | | |_
+                        |_.__/ \__,_|_| |_|\__,_|_|\__|
+
+
+                      This is an OverTheWire game server.
+            More information on http://www.overthewire.org/wargames
+
+backend: gibson-0
+
+      ,----..            ,----,          .---.
+     /   /   \         ,/   .`|         /. ./|
+    /   .     :      ,`   .'  :     .--'.  ' ;
+   .   /   ;.  \   ;    ;     /    /__./ \ : |
+  .   ;   /  ` ; .'___,/    ,' .--'.  '   \' .
+  ;   |  ; \ ; | |    :     | /___/ \ |    ' '
+  |   :  | ; | ' ;    |.';  ; ;   \  \;      :
+  .   |  ' ' ' : `----'  |  |  \   ;  `      |
+  '   ;  \; /  |     '   :  ;   .   \    .\  ;
+   \   \  ',  /      |   |  '    \   \   ' \ |
+    ;   :    /       '   :  |     :   '  |--"
+     \   \ .'        ;   |.'       \   \ ;
+  www. `---` ver     '---' he       '---" ire.org
+
+
+Welcome to OverTheWire!
+
+If you find any problems, please report them to the #wargames channel on
+discord or IRC.
+
+--[ Playing the games ]--
+
+  This machine might hold several wargames.
+  If you are playing "somegame", then:
+
+    * USERNAMES are somegame0, somegame1, ...
+    * Most LEVELS are stored in /somegame/.
+    * PASSWORDS for each level are stored in /etc/somegame_pass/.
+
+  Write-access to homedirectories is disabled. It is advised to create a
+  working directory with a hard-to-guess name in /tmp/.  You can use the
+  command "mktemp -d" in order to generate a random and hard to guess
+  directory in /tmp/.  Read-access to both /tmp/ is disabled and to /proc
+  restricted so that users cannot snoop on eachother. Files and directories
+  with easily guessable or short names will be periodically deleted! The /tmp
+  directory is regularly wiped.
+  Please play nice:
+
+    * don't leave orphan processes running
+    * don't leave exploit-files laying around
+    * don't annoy other players
+    * don't post passwords or spoilers
+    * again, DONT POST SPOILERS!
+      This includes writeups of your solution on your blog or website!
+
+--[ Tips ]--
+
+  This machine has a 64bit processor and many security-features enabled
+  by default, although ASLR has been switched off.  The following
+  compiler flags might be interesting:
+
+    -m32                    compile for 32bit
+    -fno-stack-protector    disable ProPolice
+    -Wl,-z,norelro          disable relro
+
+  In addition, the execstack tool can be used to flag the stack as
+  executable on ELF binaries.
+
+  Finally, network-access is limited for most levels by a local
+  firewall.
+
+--[ Tools ]--
+
+ For your convenience we have installed a few useful tools which you can find
+ in the following locations:
+
+    * gef (https://github.com/hugsy/gef) in /opt/gef/
+    * pwndbg (https://github.com/pwndbg/pwndbg) in /opt/pwndbg/
+    * gdbinit (https://github.com/gdbinit/Gdbinit) in /opt/gdbinit/
+    * pwntools (https://github.com/Gallopsled/pwntools)
+    * radare2 (http://www.radare.org/)
+
+--[ More information ]--
+
+  For more information regarding individual wargames, visit
+  http://www.overthewire.org/wargames/
+
+  For support, questions or comments, contact us on discord or IRC.
+
+  Enjoy your stay!
+
+bandit14@bandit:~$ /etc/bandit_pass/bandit14
+-bash: /etc/bandit_pass/bandit14: Permission denied
+bandit14@bandit:~$ cat /etc/bandit_pass/bandit14
+aaWecNkG4FhxJQxz07uiwzVP6bJiYS65
+bandit14@bandit:~$ exit
+logout
+Connection to bandit.labs.overthewire.org closed.
+
+C:\Users\Admin>ssh bandit15@bandit.labs.overthewire.org -p 2220
+                         _                     _ _ _
+                        | |__   __ _ _ __   __| (_) |_
+                        | '_ \ / _` | '_ \ / _` | | __|
+                        | |_) | (_| | | | | (_| | | |_
+                        |_.__/ \__,_|_| |_|\__,_|_|\__|
+
+
+                      This is an OverTheWire game server.
+            More information on http://www.overthewire.org/wargames
+
+backend: gibson-0
+bandit15@bandit.labs.overthewire.org's password:
+Permission denied, please try again.
+bandit15@bandit.labs.overthewire.org's password:
+Permission denied, please try again.
+bandit15@bandit.labs.overthewire.org's password:
+
+C:\Users\Admin>ssh bandit14@bandit.labs.overthewire.org -p 2220 "echo aaWecNkG4FhxJQxz07uiwzVP6bJiYS65 | nc localhost 30000"
+                         _                     _ _ _
+                        | |__   __ _ _ __   __| (_) |_
+                        | '_ \ / _` | '_ \ / _` | | __|
+                        | |_) | (_| | | | | (_| | | |_
+                        |_.__/ \__,_|_| |_|\__,_|_|\__|
+
+
+                      This is an OverTheWire game server.
+            More information on http://www.overthewire.org/wargames
+
+backend: gibson-0
+bandit14@bandit.labs.overthewire.org's password:
+Correct!
+pbLYuZtTg4MgaqfJx8jbA9gKKGqM68A7
+
+
+C:\Users\Admin>ssh bandit15@bandit.labs.overthewire.org -p 2220
+                         _                     _ _ _
+                        | |__   __ _ _ __   __| (_) |_
+                        | '_ \ / _` | '_ \ / _` | | __|
+                        | |_) | (_| | | | | (_| | | |_
+                        |_.__/ \__,_|_| |_|\__,_|_|\__|
+
+
+                      This is an OverTheWire game server.
+            More information on http://www.overthewire.org/wargames
+
+backend: gibson-0
+bandit15@bandit.labs.overthewire.org's password:
+
+      ,----..            ,----,          .---.
+     /   /   \         ,/   .`|         /. ./|
+    /   .     :      ,`   .'  :     .--'.  ' ;
+   .   /   ;.  \   ;    ;     /    /__./ \ : |
+  .   ;   /  ` ; .'___,/    ,' .--'.  '   \' .
+  ;   |  ; \ ; | |    :     | /___/ \ |    ' '
+  |   :  | ; | ' ;    |.';  ; ;   \  \;      :
+  .   |  ' ' ' : `----'  |  |  \   ;  `      |
+  '   ;  \; /  |     '   :  ;   .   \    .\  ;
+   \   \  ',  /      |   |  '    \   \   ' \ |
+    ;   :    /       '   :  |     :   '  |--"
+     \   \ .'        ;   |.'       \   \ ;
+  www. `---` ver     '---' he       '---" ire.org
+
+
+Welcome to OverTheWire!
+
+If you find any problems, please report them to the #wargames channel on
+discord or IRC.
+
+--[ Playing the games ]--
+
+  This machine might hold several wargames.
+  If you are playing "somegame", then:
+
+    * USERNAMES are somegame0, somegame1, ...
+    * Most LEVELS are stored in /somegame/.
+    * PASSWORDS for each level are stored in /etc/somegame_pass/.
+
+  Write-access to homedirectories is disabled. It is advised to create a
+  working directory with a hard-to-guess name in /tmp/.  You can use the
+  command "mktemp -d" in order to generate a random and hard to guess
+  directory in /tmp/.  Read-access to both /tmp/ is disabled and to /proc
+  restricted so that users cannot snoop on eachother. Files and directories
+  with easily guessable or short names will be periodically deleted! The /tmp
+  directory is regularly wiped.
+  Please play nice:
+
+    * don't leave orphan processes running
+    * don't leave exploit-files laying around
+    * don't annoy other players
+    * don't post passwords or spoilers
+    * again, DONT POST SPOILERS!
+      This includes writeups of your solution on your blog or website!
+
+--[ Tips ]--
+
+  This machine has a 64bit processor and many security-features enabled
+  by default, although ASLR has been switched off.  The following
+  compiler flags might be interesting:
+
+    -m32                    compile for 32bit
+    -fno-stack-protector    disable ProPolice
+    -Wl,-z,norelro          disable relro
+
+  In addition, the execstack tool can be used to flag the stack as
+  executable on ELF binaries.
+
+  Finally, network-access is limited for most levels by a local
+  firewall.
+
+--[ Tools ]--
+
+ For your convenience we have installed a few useful tools which you can find
+ in the following locations:
+
+    * gef (https://github.com/hugsy/gef) in /opt/gef/
+    * pwndbg (https://github.com/pwndbg/pwndbg) in /opt/pwndbg/
+    * gdbinit (https://github.com/gdbinit/Gdbinit) in /opt/gdbinit/
+    * pwntools (https://github.com/Gallopsled/pwntools)
+    * radare2 (http://www.radare.org/)
+
+--[ More information ]--
+
+  For more information regarding individual wargames, visit
+  http://www.overthewire.org/wargames/
+
+  For support, questions or comments, contact us on discord or IRC.
+
+  Enjoy your stay!
+
+bandit15@bandit:~$ openssl s_client -connect localhost:30001
+Connecting to 127.0.0.1
+CONNECTED(00000003)
+Can't use SSL_get_servername
+depth=0 CN=SnakeOil
+verify error:num=18:self-signed certificate
+verify return:1
+depth=0 CN=SnakeOil
+verify return:1
+---
+Certificate chain
+ 0 s:CN=SnakeOil
+   i:CN=SnakeOil
+   a:PKEY: RSA, 4096 (bit); sigalg: sha256WithRSAEncryption
+   v:NotBefore: Jun 10 03:59:50 2024 GMT; NotAfter: Jun  8 03:59:50 2034 GMT
+---
+Server certificate
+-----BEGIN CERTIFICATE-----
+MIIFBzCCAu+gAwIBAgIUBLz7DBxA0IfojaL/WaJzE6Sbz7cwDQYJKoZIhvcNAQEL
+BQAwEzERMA8GA1UEAwwIU25ha2VPaWwwHhcNMjQwNjEwMDM1OTUwWhcNMzQwNjA4
+MDM1OTUwWjATMREwDwYDVQQDDAhTbmFrZU9pbDCCAiIwDQYJKoZIhvcNAQEBBQAD
+ggIPADCCAgoCggIBANI+P5QXm9Bj21FIPsQqbqZRb5XmSZZJYaam7EIJ16Fxedf+
+jXAv4d/FVqiEM4BuSNsNMeBMx2Gq0lAfN33h+RMTjRoMb8yBsZsC063MLfXCk4p+
+09gtGP7BS6Iy5XdmfY/fPHvA3JDEScdlDDmd6Lsbdwhv93Q8M6POVO9sv4HuS4t/
+jEjr+NhE+Bjr/wDbyg7GL71BP1WPZpQnRE4OzoSrt5+bZVLvODWUFwinB0fLaGRk
+GmI0r5EUOUd7HpYyoIQbiNlePGfPpHRKnmdXTTEZEoxeWWAaM1VhPGqfrB/Pnca+
+vAJX7iBOb3kHinmfVOScsG/YAUR94wSELeY+UlEWJaELVUntrJ5HeRDiTChiVQ++
+wnnjNbepaW6shopybUF3XXfhIb4NvwLWpvoKFXVtcVjlOujF0snVvpE+MRT0wacy
+tHtjZs7Ao7GYxDz6H8AdBLKJW67uQon37a4MI260ADFMS+2vEAbNSFP+f6ii5mrB
+18cY64ZaF6oU8bjGK7BArDx56bRc3WFyuBIGWAFHEuB948BcshXY7baf5jjzPmgz
+mq1zdRthQB31MOM2ii6vuTkheAvKfFf+llH4M9SnES4NSF2hj9NnHga9V08wfhYc
+x0W6qu+S8HUdVF+V23yTvUNgz4Q+UoGs4sHSDEsIBFqNvInnpUmtNgcR2L5PAgMB
+AAGjUzBRMB0GA1UdDgQWBBTPo8kfze4P9EgxNuyk7+xDGFtAYzAfBgNVHSMEGDAW
+gBTPo8kfze4P9EgxNuyk7+xDGFtAYzAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3
+DQEBCwUAA4ICAQAKHomtmcGqyiLnhziLe97Mq2+Sul5QgYVwfx/KYOXxv2T8ZmcR
+Ae9XFhZT4jsAOUDK1OXx9aZgDGJHJLNEVTe9zWv1ONFfNxEBxQgP7hhmDBWdtj6d
+taqEW/Jp06X+08BtnYK9NZsvDg2YRcvOHConeMjwvEL7tQK0m+GVyQfLYg6jnrhx
+egH+abucTKxabFcWSE+Vk0uJYMqcbXvB4WNKz9vj4V5Hn7/DN4xIjFko+nREw6Oa
+/AUFjNnO/FPjap+d68H1LdzMH3PSs+yjGid+6Zx9FCnt9qZydW13Miqg3nDnODXw
++Z682mQFjVlGPCA5ZOQbyMKY4tNazG2n8qy2famQT3+jF8Lb6a4NGbnpeWnLMkIu
+jWLWIkA9MlbdNXuajiPNVyYIK9gdoBzbfaKwoOfSsLxEqlf8rio1GGcEV5Hlz5S2
+txwI0xdW9MWeGWoiLbZSbRJH4TIBFFtoBG0LoEJi0C+UPwS8CDngJB4TyrZqEld3
+rH87W+Et1t/Nepoc/Eoaux9PFp5VPXP+qwQGmhir/hv7OsgBhrkYuhkjxZ8+1uk7
+tUWC/XM0mpLoxsq6vVl3AJaJe1ivdA9xLytsuG4iv02Juc593HXYR8yOpow0Eq2T
+U5EyeuFg5RXYwAPi7ykw1PW7zAPL4MlonEVz+QXOSx6eyhimp1VZC11SCg==
+-----END CERTIFICATE-----
+subject=CN=SnakeOil
+issuer=CN=SnakeOil
+---
+No client certificate CA names sent
+Peer signing digest: SHA256
+Peer signature type: rsa_pss_rsae_sha256
+Negotiated TLS1.3 group: X25519MLKEM768
+---
+SSL handshake has read 3191 bytes and written 1613 bytes
+Verification error: self-signed certificate
+---
+New, TLSv1.3, Cipher is TLS_AES_256_GCM_SHA384
+Protocol: TLSv1.3
+Server public key is 4096 bit
+This TLS version forbids renegotiation.
+Compression: NONE
+Expansion: NONE
+No ALPN negotiated
+Early data was not sent
+Verify return code: 18 (self-signed certificate)
+---
+---
+Post-Handshake New Session Ticket arrived:
+SSL-Session:
+    Protocol  : TLSv1.3
+    Cipher    : TLS_AES_256_GCM_SHA384
+    Session-ID: 7018177E1C244F73C3D3CE1D0FA14BA8771968F80965498E80CC69CB58644101
+    Session-ID-ctx:
+    Resumption PSK: 07C57B200B2A5C85D53A0C6DA968927D0C5F455E536DC73D39F01D07CE3F787C2A347559FE7FDBA09BFD9AB2A0D8DE53
+    PSK identity: None
+    PSK identity hint: None
+    SRP username: None
+    TLS session ticket lifetime hint: 300 (seconds)
+    TLS session ticket:
+    0000 - 67 e3 14 59 05 ac c1 03-b5 75 90 9c 77 85 f9 8e   g..Y.....u..w...
+    0010 - 15 5c b5 8b b6 d6 e8 99-44 ca b5 17 13 b9 1c 25   .\......D......%
+    0020 - d0 6c cd 02 58 97 f1 56-0a 35 10 e6 b7 eb d1 d0   .l..X..V.5......
+    0030 - 27 67 e3 b6 da 79 d4 e6-7c 52 0d cd 34 eb e4 f2   'g...y..|R..4...
+    0040 - d3 58 f7 a1 d7 eb 56 2a-aa 6e b5 c8 e5 58 53 29   .X....V*.n...XS)
+    0050 - ff 5c 3e 68 e3 a6 e4 fb-69 9f 26 6f 45 a1 4b e4   .\>h....i.&oE.K.
+    0060 - 06 ed f9 bf a2 5e e6 45-b2 cc b0 c0 69 35 30 75   .....^.E....i50u
+    0070 - e3 c6 0a 3c 5c 51 62 5b-e2 bb 39 39 5b 39 c7 11   ...<\Qb[..99[9..
+    0080 - 49 1b f4 cd b2 ff 54 0c-5c ac fd f7 98 65 3d a7   I.....T.\....e=.
+    0090 - 14 81 6f c0 dd 7c e6 28-f0 71 92 54 84 7f 72 88   ..o..|.(.q.T..r.
+    00a0 - d4 1c 75 c6 3c e5 c9 bd-05 0f 95 33 1f e5 e6 5f   ..u.<......3..._
+    00b0 - 34 59 ae a3 cf 40 43 58-26 a7 2b f7 c1 8e 56 35   4Y...@CX&.+...V5
+    00c0 - f3 c6 c7 0b 1f 7e 56 8f-2b c1 a2 7f 3b 87 82 a9   .....~V.+...;...
+    00d0 - 36 fb ae 39 b7 ed af a1-b7 6b ea 3c dd 46 37 20   6..9.....k.<.F7
+
+    Start Time: 1789013813
+    Timeout   : 7200 (sec)
+    Verify return code: 18 (self-signed certificate)
+    Extended master secret: no
+    Max Early Data: 0
+---
+read R BLOCK
+---
+Post-Handshake New Session Ticket arrived:
+SSL-Session:
+    Protocol  : TLSv1.3
+    Cipher    : TLS_AES_256_GCM_SHA384
+    Session-ID: AA7EF160962EC264576C6D5EC64DDF1B0F6624101FB2C9C72FE5313DD70CD165
+    Session-ID-ctx:
+    Resumption PSK: CBF668F327AA640C4B3DC0C4CEB8BDABDF9A0AE83FE217E881A15115E0B462D444FEACFA9C54BBD1AE291648D79145F6
+    PSK identity: None
+    PSK identity hint: None
+    SRP username: None
+    TLS session ticket lifetime hint: 300 (seconds)
+    TLS session ticket:
+    0000 - 67 e3 14 59 05 ac c1 03-b5 75 90 9c 77 85 f9 8e   g..Y.....u..w...
+    0010 - 4f ff 4c 5e ad 70 e0 8e-ff 8a c8 9c 70 ce 53 f3   O.L^.p......p.S.
+    0020 - 38 91 3e d3 31 c4 e8 54-16 c1 f8 15 3c 09 b8 d6   8.>.1..T....<...
+    0030 - 49 6a ef 2b 08 03 48 48-fe dc 3a 2d 97 d9 8f c2   Ij.+..HH..:-....
+    0040 - 06 54 19 bc 80 b2 ac 24-4f d2 b0 f4 03 23 ca f4   .T.....$O....#..
+    0050 - d5 30 3f 94 44 32 51 ff-bf cc da d9 25 8f d2 13   .0?.D2Q.....%...
+    0060 - 2b 19 9d 5b a6 bd b4 ff-f5 d3 66 fe 7f f6 89 6d   +..[......f....m
+    0070 - dc 98 a3 d0 22 f4 d8 5e-66 0b fd 46 4f 70 6e e4   ...."..^f..FOpn.
+    0080 - 8a 44 29 eb b7 10 36 ae-39 d2 91 1d d0 c1 bb ef   .D)...6.9.......
+    0090 - 42 33 0a 66 10 56 16 f0-98 58 c5 d1 52 b8 ec 62   B3.f.V...X..R..b
+    00a0 - 5a 42 e7 37 44 4a 62 fb-59 2c d9 1d ee 8d d5 bf   ZB.7DJb.Y,......
+    00b0 - 0b 82 ab 6f 61 a4 47 bf-bc fc b7 94 aa fd 3e 81   ...oa.G.......>.
+    00c0 - d3 12 8f 84 d8 fa 6e f3-24 10 9c d7 ea e2 11 7d   ......n.$......}
+    00d0 - 6c e6 80 4d 6a 67 4f a1-28 32 3c db 14 f8 8d c6   l..MjgO.(2<.....
+
+    Start Time: 1789013813
+    Timeout   : 7200 (sec)
+    Verify return code: 18 (self-signed certificate)
+    Extended master secret: no
+    Max Early Data: 0
+---
+read R BLOCK
+pbLYuZtTg4MgaqfJx8jbA9gKKGqM68A7
+Correct!
+kS0Hf0u5HiXFwKMKFqXvPdOTNGGa0X8V
+
+closed
+bandit15@bandit:~$ exit
+logout
+Connection to bandit.labs.overthewire.org closed.
+
+C:\Users\Admin>
